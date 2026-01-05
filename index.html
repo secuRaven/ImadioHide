@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Python Steganography Tool</h1>
+
+        <div class="card">
+            <h2>Image Steganography</h2>
+            <p>Hide or extract messages from image files (PNG recommended).</p>
+            <div class="buttons">
+                <button onclick="showSection('image-encode')">Encode</button>
+                <button onclick="showSection('image-decode')">Decode</button>
+            </div>
+            
+            <div id="image-encode" class="section-content" style="display:none;">
+                <h3>Encode Message in Image</h3>
+                <input type="file" id="imageEncodeInput" accept="image/*">
+                <input type="text" id="imageEncodeMessage" placeholder="Secret message">
+                <input type="text" id="imageEncodeOutputName" placeholder="Output filename (e.g., stego_image.png)">
+                <button onclick="uploadFile('image', 'encode')">Perform Encoding</button>
+                <p id="imageEncodeStatus" class="status-message"></p>
+            </div>
+
+            <div id="image-decode" class="section-content" style="display:none;">
+                <h3>Decode Message from Image</h3>
+                <input type="file" id="imageDecodeInput" accept="image/*">
+                <button onclick="uploadFile('image', 'decode')">Perform Decoding</button>
+                <p id="imageDecodeStatus" class="status-message"></p>
+                <p id="imageDecodedMessage" class="decoded-message"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Audio Steganography</h2>
+            <p>Hide or extract messages from WAV audio files.</p>
+            <div class="buttons">
+                <button onclick="showSection('audio-encode')">Encode</button>
+                <button onclick="showSection('audio-decode')">Decode</button>
+            </div>
+
+            <div id="audio-encode" class="section-content" style="display:none;">
+                <h3>Encode Message in Audio</h3>
+                <input type="file" id="audioEncodeInput" accept=".wav">
+                <input type="text" id="audioEncodeMessage" placeholder="Secret message">
+                <input type="text" id="audioEncodeOutputName" placeholder="Output filename (e.g., stego_audio.wav)">
+                <button onclick="uploadFile('audio', 'encode')">Perform Encoding</button>
+                <p id="audioEncodeStatus" class="status-message"></p>
+            </div>
+
+            <div id="audio-decode" class="section-content" style="display:none;">
+                <h3>Decode Message from Audio</h3>
+                <input type="file" id="audioDecodeInput" accept=".wav">
+                <button onclick="uploadFile('audio', 'decode')">Perform Decoding</button>
+                <p id="audioDecodeStatus" class="status-message"></p>
+                <p id="audioDecodedMessage" class="decoded-message"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Video Steganography</h2>
+            <p>Hide or extract messages from video files (requires OpenCV on server).</p>
+            <div class="buttons">
+                <button onclick="showSection('video-encode')">Encode</button>
+                <button onclick="showSection('video-decode')">Decode</button>
+            </div>
+
+            <div id="video-encode" class="section-content" style="display:none;">
+                <h3>Encode Message in Video</h3>
+                <input type="file" id="videoEncodeInput" accept="video/*">
+                <input type="text" id="videoEncodeMessage" placeholder="Secret message">
+                <input type="text" id="videoEncodeOutputName" placeholder="Output filename (e.g., stego_video.mp4)">
+                <button onclick="uploadFile('video', 'encode')">Perform Encoding</button>
+                <p id="videoEncodeStatus" class="status-message"></p>
+            </div>
+
+            <div id="video-decode" class="section-content" style="display:none;">
+                <h3>Decode Message from Video</h3>
+                <input type="file" id="videoDecodeInput" accept="video/*">
+                <button onclick="uploadFile('video', 'decode')">Perform Decoding</button>
+                <p id="videoDecodeStatus" class="status-message"></p>
+                <p id="videoDecodedMessage" class="decoded-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
