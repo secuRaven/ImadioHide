@@ -42,10 +42,6 @@ Below are screenshots demonstrating the working of the application.
 
 <img width="1897" height="919" alt="image" src="https://github.com/user-attachments/assets/77d4daa4-b345-4976-8082-50e0acd1e421" />
 
-### Audio Steganography
-
-<img width="100%" src="https://github.com/user-attachments/assets/56f08c0a-66c3-4fa0-a533-80a46fb2e0aa" />
-
 ---
 
 ## 🛠 Technologies Used
