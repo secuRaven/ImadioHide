@@ -35,11 +35,12 @@ Below are screenshots demonstrating the working of the application.
 
 ### Encoding Secret Message
 
-<img width="100%" src="https://github.com/user-attachments/assets/dfef6a3b-c582-4d1f-8e65-35fdeb3e50fb" />
+<img width="1917" height="908" alt="Screenshot 2026-03-06 211220" src="https://github.com/user-attachments/assets/22eac5ca-d2a3-4531-850a-7f63fe096f09" />
+
 
 ### Decoding Hidden Data
 
-<img width="100%" src="https://github.com/user-attachments/assets/49d8f860-ab8f-43a5-b83c-0eb801304b58" />
+<img width="1897" height="919" alt="image" src="https://github.com/user-attachments/assets/77d4daa4-b345-4976-8082-50e0acd1e421" />
 
 ### Audio Steganography
 
